@@ -1,0 +1,44 @@
+<!--pages/homework/homework.wxml-->
+<view class="nav_title">
+  <view class="nav_tab">
+  <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
+  <view class="{{selected==index?'nav_underline':''}}"></view>
+  </view>
+  </view>
+</view>
+
+<view class="container">
+<view>
+<view wx:for="{{number.length-1}}" class="tmessage">
+  <image src='snoopy_1.jpg' class='img'></image>
+  <label>老师：{{cellsAllList[item].discription}}</label>
+</view>
+<button bindtap='click1' class='abutton'>学习</button>
+</view>
+<view>
+<view wx:for="{{total.length-1}}">
+<button>
+  <view>题目：{{homeworkList[item].discription}}</view>
+  <view wx:for="{{executionList}}" wx:for-item="i">
+  <view wx:if="{{homeworkList[item].hid == i.hid}}">
+  <view>回答：{{i.homework}}</view>
+  <view wx:if="{{i.score != -1}}">
+  <view>得分：{{i.score}}</view>
+  </view>
+  <view wx:else>
+  <view>未批改</view>
+  </view>
+  </view>
+  </view>
+  </button>
+</view>
+<button bindtap='click2'class="abutton">做题</button>
+</view>
+</view>
+
+<view class='communicate'>
+<form bindsubmit='GetName'>
+  <input name='note' type='text' placeholder='输入你想要说的内容' confirm-type='发送'></input>
+  <button form-type='submit'>提交</button>
+</form>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/course/course.wxml-->
+<view class="nav_title">
+  <view class="nav_tab">
+  <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
+  <view class="{{selected==index?'nav_underline':''}}"></view>
+  </view>
+  </view>
+</view>
+
+<view class="container">
+  <image src='http://139.155.143.116:8090/image/{{courseList.imagePath}}'></image>
+  <label>课程名：{{courseList.courseName}}</label>
+  <view wx:for="{{userList}}">
+  <label wx:if="{{item.uid == courseList.uid}}">教师：{{item.userName}}</label>
+  </view>
+  <label>简介：{{courseList.discription}}</label>
+  <label>选课人数：{{studentList.length}}</label>
+  <view class="abutton">
+    <button bindtap='click1'>选课</button>
+  </view>
+  <view class="abutton">
+    <button bindtap='click2'>收藏</button>
+  </view>
+</view>

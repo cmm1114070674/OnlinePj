@@ -1,0 +1,11 @@
+<!--pages/note/note.wxml-->
+<view class="container">
+<view wx:for="{{noteList}}" wx:for-item="i">
+<view wx:for="{{courseList}}" wx:for-item="j">
+<view wx:if="{{i.courseId == j.courseId}}" style="margin-top:10px">
+  <view class='t1'>课程名称：{{j.courseName}}</view>
+  <view>笔记内容：{{i.discription}}</view>
+</view>
+</view>
+</view>
+</view>

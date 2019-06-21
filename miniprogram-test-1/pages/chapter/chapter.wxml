@@ -1,0 +1,20 @@
+<!--pages/chapter/chapter.wxml-->
+<view class="nav_title">
+  <view class="nav_tab">
+  <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
+  <view class="{{selected==index?'nav_underline':''}}"></view>
+  </view>
+  </view>
+</view>
+
+<view class="container">
+<view wx:for="{{courseUnitList}}" wx:for-item="i" class="chapter1">
+  <label class='t1'>章节：{{i.unitName}}</label>
+  <view wx:for="{{courseCellList}}" wx:for-item="j">
+  <view wx:if="{{i.unitId == j.unitId}}">
+  <label class='t2'>知识点：{{j.cellName}}</label>
+  </view>
+  </view>
+</view>
+</view>
+

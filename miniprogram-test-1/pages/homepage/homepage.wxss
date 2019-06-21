@@ -1,0 +1,113 @@
+/* pages/homepage/homepage.wxss */
+
+.search{
+  width: 100%;
+  position: fixed;
+  top:0px;
+}
+
+/*tab框切换*/
+.nav_tab{
+  position: fixed;
+  bottom:0px;
+  width:100%;
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+    box-sizing: border-box;
+    text-decoration: inherit;
+    background-color: whitesmoke;
+}
+.show{
+  line-height:100rpx;
+  text-align:center;
+  flex:1;
+  color:#333333;
+  font-size:28rpx;
+  opacity: 0.5;
+}
+.hidden{
+  line-height:100rpx;
+  text-align:center;
+  color:#ef9ba8;
+  flex:1;
+  font-size:28rpx;
+}
+.nav_underline{
+  background:#ef9ba8;
+  width:54rpx;
+  height:6rpx;
+  margin-top:-10rpx;
+  margin-left:70rpx;
+  border-radius:8rpx;
+  
+}
+
+.t1{
+  font-size:40px;
+  font-weight:bold;
+  width:100%;
+  height:100rpx;
+  text-align:center;
+  font-family:"Times New Roman", Times, serif;
+  background-color: skyblue;
+  border-radius: 10rpx;
+   margin-top: 10rpx;
+    font-size: 80rpx;
+}
+ .aaa{
+   background: skyblue;
+   
+ }
+ .aaa::after{
+   border:none
+ }
+ .course{
+   color: rgb(255, 255, 255);
+    font-size: 0px;
+    text-align: center;
+    width: 300px;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    opacity: 1;
+    border-radius: 10px;
+    box-shadow: none;
+    border-style: none;
+    border-width: 0px;
+    border-color: rgb(0, 0, 0);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    display: block;
+ }
+ #lalalaji{
+   margin-top:-160rpx;
+ }
+ /*.course{
+  border-color: skyblue;
+  border-width: 10rpx;
+}
+
+/*.imgblock{
+  width: 100px;
+  height: 100px;
+}
+
+.img{
+  border-radius: 50%;
+  width:200px;
+  height: 100px;
+  left: 0px
+}
+
+.teacher1{
+  right: 100px;
+  top:1000px;
+}
+
+.teacher{
+  width: 100%;
+} */

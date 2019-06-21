@@ -1,0 +1,56 @@
+<!--pages/mycourse/mycourse.wxml-->
+<view class='container'>
+<view class='t1' id="lalalaji">
+<text>已选课程</text>
+</view>
+<view wx:for="{{studentList}}" wx:for-item="i" class="course">
+<view wx:for="{{courseList}}" wx:for-item="j" class="course">
+<view wx:if="{{i.courseId == j.courseId}}" style="margin-top:10px">
+  <navigator
+  url="../course/course?courseId={{i.courseId}}&userId={{userId}}"
+  hover-class="navigator-hover"
+  >
+  <button>
+  <image src='http://139.155.143.116:8090/image/{{j.imagePath}}'></image>
+  <label>课程名：{{j.courseName}}</label>
+  <view wx:for="{{userList}}" wx:for-item="k">
+  <label wx:if="{{k.uid == j.uid}}">教师：{{k.userName}}</label>
+  </view>
+  <label>简介：{{j.discription}}</label>
+  </button>
+  </navigator>
+</view>
+</view>
+</view>
+
+<view class='t1'>
+<text>收藏课程</text>
+</view>
+<view wx:for="{{collectionList}}" wx:for-item="i" class="course">
+<view wx:for="{{courseList}}" wx:for-item="j" class="course">
+<view wx:if="{{i.courseId == j.courseId}}" style="margin-top:10px">
+  <navigator
+  url="../course/course?courseId={{i.courseId}}&userId={{userId}}"
+  hover-class="navigator-hover"
+  >
+  <button>
+  <image src='http://139.155.143.116:8090/image/{{j.imagePath}}'></image>
+  <label>课程名：{{j.courseName}}</label>
+  <view wx:for="{{userList}}" wx:for-item="k">
+  <label wx:if="{{k.uid == j.uid}}">教师：{{k.userName}}</label>
+  </view>
+  <label>简介：{{j.discription}}</label>
+  </button>
+  </navigator>
+</view>
+</view>
+</view>
+</view>
+
+<view class="nav_title">
+  <view class="nav_tab">
+  <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
+  <view class="{{selected==index?'nav_underline':''}}"></view>
+  </view>
+  </view>
+</view>
